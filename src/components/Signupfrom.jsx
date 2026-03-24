@@ -20,7 +20,7 @@ const SignupForm = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:4000/useradd', {
+      const response = await fetch('http://20.106.193.153:4000/useradd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

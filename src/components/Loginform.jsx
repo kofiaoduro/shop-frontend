@@ -16,7 +16,7 @@ function Loginform({ setUserFirstName }) {
         };
         console.log(data)
         try {
-            const response = await fetch('http://localhost:4000/userLogin', {
+            const response = await fetch('http://20.106.193.153:4000/userLogin', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
