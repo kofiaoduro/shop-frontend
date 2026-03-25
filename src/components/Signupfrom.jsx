@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-
+const apiUrl = import.meta.env.VITE_API_URL
 const SignupForm = () => {
   // Step 1: state to hold form values
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ const SignupForm = () => {
     };
 
     try {
-      const response = await fetch('http://20.106.193.153:4000/useradd', {
+      const response = await fetch(`${apiUrl}/useradd`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

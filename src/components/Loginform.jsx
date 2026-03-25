@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 function Loginform({ setUserFirstName }) {
+    const apiUrl = import.meta.env.VITE_API_URL
+    console.log(apiUrl)
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
@@ -16,7 +18,7 @@ function Loginform({ setUserFirstName }) {
         };
         console.log(data)
         try {
-            const response = await fetch('http://20.106.193.153:4000/userLogin', {
+            const response = await fetch(`${apiUrl}/userLogin`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
